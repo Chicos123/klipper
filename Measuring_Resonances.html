@@ -1450,6 +1450,20 @@
   
   
     <li class="md-nav__item">
+      <a href="CANBUS_Troubleshooting.html" class="md-nav__link">
+        CANBUS Troubleshooting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="TSL1401CL_Filament_Width_Sensor.html" class="md-nav__link">
         TSL1401CL filament width sensor
       </a>
@@ -2036,7 +2050,7 @@ smaller parallel resistors.</p>
 <tbody>
 <tr>
 <td align="center">VCC</td>
-<td align="center">39</td>
+<td align="center">36</td>
 <td align="center">3v3</td>
 </tr>
 <tr>
@@ -2129,10 +2143,11 @@ sudo apt install python3-numpy python3-matplotlib libatlas-base-dev
 of time, up to 10-20 minutes. Be patient and wait for the completion of
 the installation. On some occasions, if the board has too little RAM
 the installation may fail and you will need to enable swap.</p>
-<p>Afterwards, check and follow the instructions in the
-<a href="RPi_microcontroller.html">RPi Microcontroller document</a> to setup the
-"linux mcu" on the Raspberry Pi.</p>
 <h4 id="configure-adxl345-with-rpi">Configure ADXL345 With RPi<a class="headerlink" href="#configure-adxl345-with-rpi" title="Permanent link">&para;</a></h4>
+<p>First, check and follow the instructions in the
+<a href="RPi_microcontroller.html">RPi Microcontroller document</a> to setup the
+"linux mcu" on the Raspberry Pi. This will configure a second Klipper
+instance that runs on your Pi.</p>
 <p>Make sure the Linux SPI driver is enabled by running <code>sudo
 raspi-config</code> and enabling SPI under the "Interfacing options" menu.</p>
 <p>Add the following to the printer.cfg file:</p>
@@ -2230,7 +2245,7 @@ probe_points:
     100, 100, 20  # an example
 
 [static_digital_output pico_3V3pwm] # Improve power stability
-pin: pico:gpio23
+pins: pico:gpio23
 </code></pre></div>
 
 <h4 id="configure-mpu-9520-compatibles-with-avr">Configure MPU-9520 Compatibles with AVR<a class="headerlink" href="#configure-mpu-9520-compatibles-with-avr" title="Permanent link">&para;</a></h4>
